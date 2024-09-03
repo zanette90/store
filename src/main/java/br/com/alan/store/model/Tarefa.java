@@ -3,13 +3,8 @@ package br.com.alan.store.model;
 import br.com.alan.store.repository.TarefaRepository;
 import jakarta.persistence.*;
 import org.jetbrains.annotations.NotNull;
-import org.springframework.beans.factory.annotation.Autowired;
-
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
 
 @Entity
 @Table(name="task")
@@ -34,6 +29,7 @@ public class Tarefa {
     private LocalTime horasConsumidas;
     private LocalTime horaInicio;
     private LocalTime horaFim;
+
 
     public Tarefa() {
     }

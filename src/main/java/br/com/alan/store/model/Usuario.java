@@ -29,7 +29,7 @@ public class Usuario {
     @Column
     private String senha;
     @Transient
-    private UsuarioRepository repository;
+    private UsuarioRepository usuarioRepository;
 
     public Usuario() {
 
@@ -40,7 +40,7 @@ public class Usuario {
         this.cpf = cpf;
         this.endereco = endereco;
         this.senha = senha;
-        this.repository = repositorio;
+        this.usuarioRepository = repositorio;
     }
     public long getId() {
         return id;
@@ -73,7 +73,7 @@ public class Usuario {
         this.senha = senha;
     }
     public void listarUsuario(){
-        List<Usuario> usuarios = repository.findAll();
+        List<Usuario> usuarios = usuarioRepository.findAll();
         for (Usuario u : usuarios){
             System.out.println(u.toString());
         }

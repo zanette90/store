@@ -30,10 +30,9 @@ public class StoreApplication implements CommandLineRunner {
 		Menu menu = new Menu();
 
 		Tarefa tarefa = new Tarefa("Corrigir bugs", prazo, tRepositorio);
-		//tRepositorio.save(tarefa);
+		tRepositorio.save(tarefa);
 
 		Usuario usuario = new Usuario("Alan","alan.stefenon@hotmail.com","02737149029","Rua tal","123",uRepositorio);
-		//uRepositorio.save(usuario);
 		listarUsuario();
 		listarTarefa();
 	}
